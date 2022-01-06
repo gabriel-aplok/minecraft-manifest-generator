@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="title" content="Manifest Generator" />
+	<meta name="description" content="A basic manifest generator for Minecraft Bedrock add-ons." />
+	<meta name="author" content="Gabriel Aplok" />
+	<meta name="keywords" content="Gabriel Aplok, Minecraft, Bedrock, MCPE, MCBE, Add-On, Manifest Generator, manifest.json" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://gabriel-aplok.github.io/minecraft-manifest-generator/" />
+	<meta property="og:title" content="Manifest Generator" />
+	<meta property="og:description" content="A basic manifest generator for Minecraft Bedrock add-ons." />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://gabriel-aplok.github.io/minecraft-manifest-generator/" />
+	<meta property="twitter:title" content="Manifest Generator" />
+	<meta property="twitter:description" content="A basic manifest generator for Minecraft Bedrock add-ons." />
+
+	<title>Manifest Generator</title>
+
+	<link rel="icon" href="assets/images/favicon.ico" />
+	<link rel="shortcut icon" href="assets/images/favicon.ico" />
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="col-lg-8 mx-auto p-3 py-md-5">
+
+		<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+			<a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+				<span class="fs-4">Manifest Generator</span>
+			</a>
+		</header>
+
+		<main>
+			<input type="text" id="name" placeholder="Pack Name" class="form-control" />
+			<br />
+			<input type="text" id="description" placeholder="Pack Description" class="form-control" />
+			<br />
+			<select class="form-control" id="min_engine_version">
+				<option selected value="[1, 17, 40]">1.17.40</option>
+				<option value="[1, 17, 30]">1.17.30</option>
+				<option value="[1, 17, 20]">1.17.20</option>
+				<option value="[1, 17, 10]">1.17.10</option>
+				<option value="[1, 17, 0]">1.17.0</option>
+			</select>
+			<br />
+			<select class="form-control" id="type">
+				<option selected value="resources">Resources Pack</option>
+				<option value="data">Behavior Pack</option>
+			</select>
+			<br />
+			<center>
+				<button type="button" id="generate" class="btn btn-primary">Generate Manifest</button>
+			</center>
+			<br />
+			<br />
+			<textarea spellcheck="false" class="form-control" id="output" rows="15"></textarea>
+			<br />
+			<center>
+				<button type="button" id="copyToClipboard" class="btn btn-secondary">Copy to Clipboard</button>
+				<button type="button" id="downloadFile" class="btn btn-secondary">Download File</button>
+			</center>
+		</main>
+
+		<footer class="pt-5 my-5 text-muted border-top">
+			<span class="site-footer-owner">Created by <a href="https://gabriel-aplok.github.io/">Gabriel Aplok</a>.</span>
+		</br>
+		<span class="site-footer-credits">This site is not affiliated with Mojang Studios.</span>
+	</footer>
+</div>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/FileSaver.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
